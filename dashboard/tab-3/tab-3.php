@@ -13,7 +13,7 @@
         <aside>
             <div class="toggle">
                 <div class="logo">
-                    <img src="../tab-4/images/clothes.png" alt="logo">
+                    <img src="../tab-1/images/clothes.png" alt="logo">
                     <h2>Textile<span class="danger">Company</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -85,6 +85,7 @@
         <!--End of sidebar-->
 
         <!--Start of Main Content --> 
+        
 
 </div>
 
