@@ -40,7 +40,7 @@
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
-                    <h3>Staff</h3>
+                    <h3>Employee</h3>
                 </a>
                 <a href="../tab-3/tab-3.php" id="tab3">
                     <span class="material-icons-sharp">
@@ -74,6 +74,12 @@
                         person_3
                     </span>
                     <h3>Customers</h3>
+                </a>
+                <a href="../tab-8/tab-8.php" id="tab8">
+                    <span class="material-icons-sharp">
+                        payments
+                    </span>
+                    <h3>Payement</h3>
                 </a>
                 <a href="../tab-1/logout.php">
                     <span class="material-icons-sharp">

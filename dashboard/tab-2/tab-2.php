@@ -74,6 +74,12 @@
                     </span>
                     <h3>Customers</h3>
                 </a>
+                <a href="../tab-8/tab-8.php" id="tab8">
+                    <span class="material-icons-sharp">
+                        payments
+                    </span>
+                    <h3>Payement</h3>
+                </a>
                 <a href="../tab-1/logout.php">
                     <span class="material-icons-sharp">
                         logout

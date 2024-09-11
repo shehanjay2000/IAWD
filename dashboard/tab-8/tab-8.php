@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
-    <title>Garment Website - Home</title>
-    
+    <link rel="stylesheet" href="tab-8.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <!--side bar -->
         <aside>
             <div class="toggle">
@@ -41,7 +40,7 @@
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
-                    <h3>Staff</h3>
+                    <h3>Employee</h3>
                 </a>
                 <a href="../tab-3/tab-3.php" id="tab3">
                     <span class="material-icons-sharp">
@@ -63,6 +62,7 @@
                     </span>
                     <h3>Products</h3>
                 </a>
+                
                 <a href="../tab-6/tab-6.php" id="tab6">
                     <span class="material-icons-sharp">
                         local_shipping
@@ -89,15 +89,13 @@
                 </a>
             </div>
         </aside>
-    </div>
-
         <!--End of sidebar-->
 
-        <!--Start of Main Content --> 
+        <!--Start of Main Content -->
 
+        
+</div>
 
-    
-    
-    <script src="home.js"></script>
+        <script src="tab-8.js"></script>
 </body>
 </html>
