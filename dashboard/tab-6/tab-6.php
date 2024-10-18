@@ -93,6 +93,68 @@
 
         <!--Start of Main Content --> 
 
+         <!-- Header and New Supplier Button -->
+    <h2>List of Suppliers</h2>
+    <a class="btn btn-primary" href="/IAWD/dashboard/tab-6/create.php" role="button">New Supplier</a>
+    <br>
+    
+    <!-- Table of Suppliers -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>supplier name</th>
+                <th>contact info</th>
+                <th>address</th>
+                <th>product supplied</th>
+                <th>email</th>
+                <th>Actions</th> <!-- Actions column for Edit/Delete buttons -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $servername ="localhost";
+            $username ="root";
+            $password ="";
+            $database ="textiledb";
+            
+            // Create connection 
+            $connection = new mysqli($servername, $username, $password, $database);
+
+            // Check connection
+            if ($connection->connect_error) {
+                die ("Connection failed: " . $connection->connect_error);
+            }
+
+            // Read all rows from the suppliers table
+            $sql = "SELECT * FROM suppliers";
+            $result = $connection->query($sql);
+
+            if (!$result) {
+                die ("Invalid query: " . $connection->error);
+            }
+
+            // Fetch and display each row from the result
+            while ($row = $result->fetch_assoc()) {
+                echo "
+                <tr>
+                    <td>{$row['id']}</td>
+                    <td>{$row['supplier_name']}</td>
+                    <td>{$row['contact_info']}</td>
+                    <td>{$row['address']}</td>
+                    <td>{$row['product_supplied']}</td>
+                    <td>{$row['email']}</td>
+                    <td>
+                        <a class='btn btn-primary btn-sm' href='/IAWD/dashboard/tab-6/edit.php?id={$row['id']}'>Edit</a>
+                        <a class='btn btn-danger btn-sm' href='/IAWD/dashboard/tab-6/delete.php?id={$row['id']}'>Delete</a>
+                    </td>
+                </tr>
+                ";
+            }
+            ?>
+        </tbody>
+    </table>
+
 </div>
 
         <script src="tab-6.js"></script>
