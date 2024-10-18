@@ -118,7 +118,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    grid-template-columns: 12rem auto 0.5rem;
 }
 
 aside{
@@ -343,7 +343,7 @@ main{
     }
 
     main{
-        margin-top: 8rem;
+        margin-top: 15rem;
         padding: 0 1rem;
     }
 
@@ -393,3 +393,80 @@ main{
     
 }
 
+/* Container to align form and table */
+
+/* General form container styling */
+main .form_container {
+    margin-top: 1.3rem;
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .form_container:hover {
+    box-shadow: none;
+}
+
+/* Form styling */
+main .form_container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+main .form_container input {
+    padding: 0.8rem;
+    border: 1px solid var(--color-light);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .form_container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 102, 255, 0.2);
+}
+
+main .form_container .btn {
+    background-color: #1068ee;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: var(--card-border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .form_container .btn:hover {
+    background-color: #004ecb;
+}
+
+/* Search bar styling */
+#search-bar {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid var(--color-light);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 102, 255, 0.2);
+}
+
+main .form_container table {
+    margin-top: 1.0rem;
+    
+    width: 100%;
+   
+    text-align: center;
+    
+    border-spacing: 10px 10px; /* Add space between columns and rows */
+}
