@@ -245,37 +245,20 @@
 
 <script>
     function editPayment(id, amount, payment_type, description, date, category) {
-        document.getElementById('edit_id').value = id; // Store the ID of the record being edited
-        document.getElementById('amount').value = amount; // Fill in the amount
-        document.getElementById('payment_type').value = payment_type; // Fill in the payment type
-        document.getElementById('description').value = description; // Fill in the description
-        document.getElementById('date').value = date; // Fill in the date
-        document.getElementById('category').value = category; // Fill in the category
+        document.getElementById('edit_id').value = id; // Store the ID of the record to be edited
+        document.getElementById('amount').value = amount;
+        document.getElementById('payment_type').value = payment_type;
+        document.getElementById('description').value = description;
+        document.getElementById('date').value = date;
+        document.getElementById('category').value = category;
     }
 
     function deletePayment(id) {
-        if (confirm("Are you sure you want to delete this record?")) {
-            fetch('delete_payment.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ id: id }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Record deleted successfully.");
-                    location.reload(); // Refresh the page to see updated records
-                } else {
-                    alert("Error deleting record: " + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        if (confirm("Are you sure you want to delete this payment?")) {
+            window.location.href = "delete.php?id=" + id; // Redirect to delete script
         }
     }
 </script>
+
 </body>
 </html>
