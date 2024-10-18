@@ -74,8 +74,6 @@ h1{
 h2{
     font-weight: 600;
     font-size: 1.4rem;
-    color: #3a0ca3; /* Dark purple */
-    font-weight: bold;
 }
 
 h3{
@@ -120,7 +118,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 0.5rem;
+    grid-template-columns: 12rem auto 23rem;
 }
 
 aside{
@@ -208,6 +206,8 @@ main{
     margin-left: 1.5rem;
 }
 
+
+
 .right-section{
     margin-top: 1.4rem;
 }
@@ -261,80 +261,7 @@ main{
     overflow: hidden;
 }
 
-.btn-primary {
-    background-color: #5e60ce; /* Purple shade */
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-weight: bold;
-}
 
-.btn-primary:hover {
-    background-color: #4a40b5; /* Darker purple */
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: separate;
-    border-spacing: 8px;
-}
-
-th {
-    color: #3a0ca3;
-    font-weight: bold;
-    text-align: center;
-}
-
-td {
-    background-color: #f8f9fc;
-    border-radius: 10px;
-    padding: 10px 10px;
-    text-align: center;
-}
-
-td a.btn {
-    border-radius: 20px;
-}
-
-.btn-sm {
-    padding: 5px 15px;
-}
-
-.btn-danger {
-    background-color: #ff6b6b;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #e85d5d;
-}
-
-/* Rounded input fields */
-input[type="text"], input[type="email"], select {
-    border-radius: 25px;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    width: 100%;
-}
-
-/* Styling links for a flat look */
-a {
-    color: #3a0ca3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.table thead th {
-    background-color: #5e60ce;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-}
 
 @media screen and (max-width: 1200px) {
     .container{
@@ -358,6 +285,9 @@ a:hover {
         position: relative;
         margin-top: 1.8rem;
     }
+
+   
+
 }
 
 @media screen and (max-width: 768px) {
@@ -417,6 +347,7 @@ a:hover {
         padding: 0 1rem;
     }
 
+    
     .right-section{
         width: 94%;
         margin: 0 auto 4rem;
@@ -458,4 +389,7 @@ a:hover {
     .right-section .nav button span{
         font-size: 2rem;
     }
+
+    
 }
+
