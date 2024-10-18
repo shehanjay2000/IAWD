@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="tab-3.css">
     <title>Document</title>
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
         <!--side bar -->
         <aside>
             <div class="toggle">
@@ -19,17 +21,11 @@
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
                         close
-                        </span>
+                    </span>
                 </div>
             </div>
 
             <div class="sidebar">
-                <a href="../home/home.php" id="home">
-                    <span class="material-icons-sharp">
-                        home
-                    </span>
-                    <h3>Home</h3>
-                </a>
                 <a href="../tab-1/tab-1.php" id="tab1">
                     <span class="material-icons-sharp">
                         dashboard
@@ -48,11 +44,11 @@
                     </span>
                     <h3>Inventory</h3>
                 </a>
-                
+
                 <a href="../tab-4/tab-4.php" id="tab4">
-                <span class="material-icons-sharp">
-                email
-                </span>
+                    <span class="material-icons-sharp">
+                        email
+                    </span>
                     <h3>Orders</h3>
                     <span class="message-count">27</span>
                 </a>
@@ -88,13 +84,44 @@
                 </a>
             </div>
         </aside>
+
         <!--End of sidebar-->
 
-        <!--Start of Main Content --> 
-        
+        <!--Start of Main Content -->
 
-</div>
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
 
-        <script src="tab-3.js"></script>    
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Shehan</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../tab-1/images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="tab-3.js"></script>
 </body>
+
 </html>

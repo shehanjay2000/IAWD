@@ -690,3 +690,7 @@ main .recent-orders a{
     
 }
 
+a:is(:link, :active, :visited).active {
+    color: white;
+    background-color: var(--color-primary);
+}

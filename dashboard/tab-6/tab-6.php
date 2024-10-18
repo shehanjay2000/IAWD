@@ -24,12 +24,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="../home/home.php" id="home">
-                    <span class="material-icons-sharp">
-                        home
-                    </span>
-                    <h3>Home</h3>
-                </a>
+                
                 <a href="../tab-1/tab-1.php" id="tab1">
                     <span class="material-icons-sharp">
                         dashboard
@@ -93,6 +88,35 @@
 
         <!--Start of Main Content --> 
 
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Shehan</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../tab-1/images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
 </div>
 
         <script src="tab-6.js"></script>
