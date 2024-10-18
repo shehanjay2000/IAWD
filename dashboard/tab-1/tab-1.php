@@ -30,12 +30,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="../home/home.php" id="home">
-                    <span class="material-icons-sharp">
-                        home
-                    </span>
-                    <h3>Home</h3>
-                </a>
+                
                 <a href="../tab-1/tab-1.php" id="tab1">
                     <span class="material-icons-sharp">
                         dashboard

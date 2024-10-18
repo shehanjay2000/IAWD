@@ -34,3 +34,9 @@ Orders.forEach(order => {
     document.querySelector('table tbody').appendChild(tr);
 });
 
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('sidebar a').forEach(link=>{
+    if(link.href.includes('${activePage}')){
+        link.classList.add('active');
+    }
+})

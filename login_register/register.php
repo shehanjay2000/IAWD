@@ -39,15 +39,8 @@
             session_start();
             $row = $result->fetch_assoc();
 
-            // Check if the user is an admin
-            if($row['type'] === 'admin'){
-                $_SESSION['email'] = $row['email'];
-                header("Location: ../dashboard/tab-1/tab-1.php"); // Admin dashboard
-            } else {
-                // Redirect to a different page for regular users
-                $_SESSION['email'] = $row['email'];
-                header("Location: ../dashboard/home/home.php"); 
-            }
+            $_SESSION['email'] = $row['email'];
+            header("Location: ../dashboard/tab-1/tab-1.php");
             exit();
         } else {
             echo "Not Found, incorrect email or password.";
