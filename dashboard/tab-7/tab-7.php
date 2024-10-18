@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="tab-7.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <title>Customer List</title>
 </head>
 <body>
@@ -72,7 +72,7 @@
 		<div class="my-5">
 			<h2>List of Customers</h2>
 			<a class="btn btn-primary mb-3" href="/IAWD/dashboard/tab-7/create.php" role="button">New Customer</a>
-			<table class="table table-striped">
+			<table>
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -124,7 +124,7 @@
 							<td>{$gender}</td>
 							<td>
 								<a class='btn btn-primary btn-sm' href='/IAWD/dashboard/tab-7/edit.php?id={$row['id']}'>Edit</a>
-								<a class='btn btn-danger btn-sm' href='/IAWD/dashboard/tab-7/delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this customer?\");'>Delete</a>
+								<a class='btn btn-danger btn-sm' href='/IAWD/dashboard/tab-7/delete.php?id={$row['id']}'>Delete</a>
 							</td>
 						</tr>
 						";
@@ -135,8 +135,8 @@
 					?>
 				</tbody>
 			</table>
-		</div>
-	</main>
+		</div
+    </main>
 </div>
 <script src="tab-7.js"></script>
 </body>
