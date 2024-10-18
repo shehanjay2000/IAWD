@@ -19,6 +19,9 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
-
+function searchOrders() {
+  const query = document.getElementById('search-bar').value;
+  window.location.href = `tab-4.php?search=${query}`;
+}
 
 
