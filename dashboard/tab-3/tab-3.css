@@ -206,7 +206,6 @@ main{
     margin-left: 1.5rem;
 }
 
-<<<<<<< Updated upstream
 
 
 .right-section{
@@ -264,8 +263,6 @@ main{
 
 
 
-=======
->>>>>>> Stashed changes
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
@@ -396,47 +393,3 @@ main{
     
 }
 
-main .containerForm{
-    margin-top: 1.3rem;
-}
-
-main .containerForm h2{
-    margin-bottom: 0.8rem;
-}
-
-main .containerForm table{
-    margin-top: 1.0rem;
-    background-color: var(--color-white);
-    width: 100%;
-    padding: var(--card-padding);
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--card-border-radius);
-    transition: all 0.3s ease;
-}
-
-main .containerForm table:hover{
-    box-shadow: none;
-}
-
-main table tbody td{
-    height: 3.5rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
-}
-
-main table tbody tr:last-child td{
-    border: none;
-}
-
-main .containerForm a{
-    background-color: #1068ee;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-}
