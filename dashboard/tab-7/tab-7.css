@@ -118,7 +118,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    grid-template-columns: 12rem auto 0.5rem;
 }
 
 aside{
@@ -290,7 +290,7 @@ main{
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen (max-width: 768px) {
     .container{
         width: 100%;
         grid-template-columns: 1fr;
@@ -392,4 +392,52 @@ main{
 
     
 }
+
+<-- main-->
+main .my-5{
+    margin-top: 1.3rem;
+}
+
+main .my-5 h2{
+    margin-bottom: 0.8rem;
+}
+
+main .my-5 table{
+    margin-top: 1.0rem;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .my-5 table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 3.5rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .my-5 a{
+    background-color: #1068ee;
+    color: ;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
 
