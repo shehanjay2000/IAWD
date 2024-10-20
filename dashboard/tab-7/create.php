@@ -1,3 +1,63 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "textiledb";
+
+// Create connection 
+$connection = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
+
+// Initialize variables
+$customer_name = "";
+$email = "";
+$phone = "";
+$address = "";
+$country = "";
+$gender = "";
+
+$errorMessage = "";
+$successMessage = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $customer_name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $country = $_POST["country"];
+    $gender = $_POST["gender"];
+    
+    // Check if terms are accepted
+    if (!isset($_POST['terms'])) {
+        $errorMessage = "You must agree to the terms and conditions";
+    }
+
+    // Validate inputs
+    if (empty($customer_name) || empty($email) || empty($phone) || empty($address) || empty($country) || empty($gender)) {
+        $errorMessage = "All fields are required";
+    } else {
+        // Prepare an insert statement
+        $sql = "INSERT INTO customers (customer_name, email, phone, address, country, gender) 
+                VALUES (?, ?, ?, ?, ?, ?)";
+        
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("ssssss", $customer_name, $email, $phone, $address, $country, $gender);
+
+        if (!$stmt->execute()) {
+            $errorMessage = "Invalid Query: " . $connection->error;
+        } else {
+            $successMessage = "Customer added successfully";
+            header("location: /IAWD/dashboard/tab-7/tab-7.php");
+            exit;
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,34 +69,8 @@
 </head>
 <body>
     <div class="container my-5">
-        <h2>New Customer</h2>
+        <h2>Add New Customer</h2>
         <?php
-        // Initialize variables
-        $errorMessage = $successMessage = "";
-        $customer_name = $email = $phone = $address = $country = $gender = "";
-
-        // Check if the form was submitted
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $customer_name = $_POST['name'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $country = $_POST['country'];
-            $address = $_POST['address'];
-            $gender = $_POST['gender'];
-
-            // Check if agreement checkbox is checked
-            if (!isset($_POST['agreement'])) {
-                $errorMessage = "You must accept the terms and conditions.";
-            } else {
-                // Here you can handle the data (e.g., insert into the database)
-                // For demonstration, we assume success
-                $successMessage = "Customer added successfully!";
-                // Reset fields after successful submission
-                $customer_name = $email = $phone = $address = $country = $gender = "";
-            }
-        }
-
-        // Show error message
         if (!empty($errorMessage)) {
             echo "
             <div class='alert alert-warning alert-dismissible fade show' role='alert'>
@@ -46,7 +80,7 @@
             ";
         }
         ?>
-        <form method="post" onsubmit="return validateForm()">
+        <form method="post">
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Name</label>
                 <div class="col-sm-6">
@@ -64,7 +98,7 @@
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Phone</label>
                 <div class="col-sm-6">
-                    <input type="tel" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>" required>
+                    <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>" required>
                 </div>
             </div>
 
@@ -90,7 +124,6 @@
                 </div>
             </div>
 
-            <!-- Gender Selection -->
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Gender</label>
                 <div class="col-sm-6">
@@ -109,19 +142,19 @@
                 </div>
             </div>
 
+            <!-- Terms and Conditions Checkbox -->
             <div class="row mb-3">
                 <div class="offset-sm-3 col-sm-6">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agreement" name="agreement">
-                        <label class="form-check-label" for="agreement">
-                            I agree to the terms and conditions
+                        <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            I agree to the <a href="/IAWD/dashboard/tab-7/terms.php" target="_blank">terms and conditions</a>.
                         </label>
                     </div>
                 </div>
             </div>
 
             <?php
-            // Show success message
             if (!empty($successMessage)) {
                 echo "
                 <div class='row mb-3'>
@@ -146,16 +179,5 @@
             </div>
         </form>
     </div>
-
-    <script>
-        function validateForm() {
-            const agreement = document.getElementById('agreement');
-            if (!agreement.checked) {
-                alert("You must accept the agreement before submitting the form.");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </body>
 </html>
