@@ -22,6 +22,14 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
 
 *{
     margin: 0;
@@ -66,6 +74,8 @@ h1{
 h2{
     font-weight: 600;
     font-size: 1.4rem;
+    color: #3a0ca3; /* Dark purple */
+    font-weight: bold;
 }
 
 h3{
@@ -110,7 +120,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    grid-template-columns: 12rem auto 0.5rem;
 }
 
 aside{
@@ -193,6 +203,139 @@ aside .sidebar .message-count{
     border-radius: var(--border-radius-1);
 }
 
+main{
+    margin-top: 1.4rem;
+    margin-left: 1.5rem;
+}
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: #5e60ce; /* Purple shade */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #4a40b5; /* Darker purple */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+
+th {
+    color: #3a0ca3;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    background-color: #f8f9fc;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+td a.btn {
+    border-radius: 20px;
+}
+
+.btn-sm {
+    padding: 5px 15px;
+}
+
+.btn-danger {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #e85d5d;
+}
+
+/* Rounded input fields */
+input[type="text"], input[type="email"], select {
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+/* Styling links for a flat look */
+a {
+    color: #3a0ca3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.table thead th {
+    background-color: #5e60ce;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
@@ -269,4 +412,50 @@ aside .sidebar .message-count{
         cursor: pointer;
     }
 
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
 }

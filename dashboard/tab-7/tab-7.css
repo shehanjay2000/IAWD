@@ -290,7 +290,7 @@ main{
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen (max-width: 768px) {
     .container{
         width: 100%;
         grid-template-columns: 1fr;
@@ -393,6 +393,7 @@ main{
     
 }
 
+<-- main-->
 main .my-5{
     margin-top: 1.3rem;
 }
@@ -428,7 +429,7 @@ main table tbody tr:last-child td{
 
 main .my-5 a{
     background-color: #1068ee;
-    color: white;
+    color: ;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -437,5 +438,6 @@ main .my-5 a{
     transition: background-color 0.3s ease;
 
 }
+
 
 

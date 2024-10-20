@@ -22,6 +22,14 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
 
 *{
     margin: 0;
@@ -193,6 +201,71 @@ aside .sidebar .message-count{
     border-radius: var(--border-radius-1);
 }
 
+main{
+    margin-top: 1.4rem;
+    margin-left: 1.5rem;
+}
+
+<<<<<<< Updated upstream
+
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+=======
+>>>>>>> Stashed changes
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
@@ -215,6 +288,8 @@ aside .sidebar .message-count{
         position: relative;
         margin-top: 1.8rem;
     }
+
+   
 
 }
 
@@ -269,5 +344,99 @@ aside .sidebar .message-count{
         display: inline-block;
         cursor: pointer;
     }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
+
+    
 }
 
+main .containerForm{
+    margin-top: 1.3rem;
+}
+
+main .containerForm h2{
+    margin-bottom: 0.8rem;
+}
+
+main .containerForm table{
+    margin-top: 1.0rem;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .containerForm table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 3.5rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .containerForm a{
+    background-color: #1068ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
